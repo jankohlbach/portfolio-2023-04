@@ -658,7 +658,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@3.3.2":
+"@nuxt/kit@3.3.2", "@nuxt/kit@^3.3.2":
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.3.2.tgz#e3cd19c0f5cd0f124fff6f659a5f25002f808946"
   integrity sha512-mHucMYuN/nVJp0p+L6ezzEls8Y1PerAXCJi01lS3Z5ozz+l2OusEfes8EBxWcy3x0C5465ignXCujQs3/LAvnQ==
@@ -940,6 +940,28 @@
     "@types/estree" "^1.0.0"
     estree-walker "^2.0.2"
     picomatch "^2.3.1"
+
+"@storyblok/js@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-2.1.3.tgz#e3b47656d6cb4a50e06ba2c63ba63264627bd017"
+  integrity sha512-lUnCygXMmw3VJQldM5JyEFwraKz2OYN+rt1FvvlWn/55DQfbB/DIgnoQ1mpRw4tJoBqGPRgEQJGOH8e/Q1Vm7Q==
+  dependencies:
+    storyblok-js-client "^5.10.2"
+
+"@storyblok/nuxt@^5.3.4":
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/@storyblok/nuxt/-/nuxt-5.3.4.tgz#4af498b87b61295b86561cb3f9d17310e89a946a"
+  integrity sha512-o8WwJHgOnpZnPlCcbTg+Brd8bywcJyxeriggNwGDmxem9mXoyf6wIYdglJkzQP1jeiSrkPUI+sI8GhrvyXxqKw==
+  dependencies:
+    "@nuxt/kit" "^3.3.2"
+    "@storyblok/vue" "^7.1.3"
+
+"@storyblok/vue@^7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@storyblok/vue/-/vue-7.1.3.tgz#c3d0078eea7a9885b70309f05fe03cf1c1a350b2"
+  integrity sha512-05i4i6uJ+AfQVVqHYABIr+Idvsoe6+Zcs6BDVyEJf++UmLWkb76lLIGgLavZxGyToQclFEpKxDutwM1k/d/J0w==
+  dependencies:
+    "@storyblok/js" "^2.1.3"
 
 "@studio-freight/lenis@^1.0.6":
   version "1.0.6"
@@ -5282,6 +5304,11 @@ stdin-discarder@^0.1.0:
   integrity sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==
   dependencies:
     bl "^5.0.0"
+
+storyblok-js-client@^5.10.2:
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.10.2.tgz#049e9637c9a37924093309eb4cdce90c2965d438"
+  integrity sha512-Im/xN9PApDvZbONPYv3SpzjfIfXK63uPf6/eYJPvdIWnzCiWY5hlc2UYkoCR4YoaQBBOEBP1UUcGr5QjesOULg==
 
 "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
