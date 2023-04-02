@@ -15,7 +15,9 @@
 
   // font-sizes
   // 16-24
-  --fs-base: clamp(1rem, 0.861rem + 0.595vw, 1.5rem)
+  --fs-base: clamp(1rem, 0.861rem + 0.595vw, 1.5rem);
+  // 70-140
+  --fs-xl: clamp(4.375rem, 3.155rem + 5.204vw, 8.75rem);
 
   // font-weights
   --fw-thin: 100;
