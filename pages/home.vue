@@ -6,21 +6,17 @@ let story: any
 try {
   story = await useAsyncStoryblok(
     slug && Array.isArray(slug) ? slug.join('/') : 'home',
-    { version: 'draft' }
+    { version: <'draft'|'published'>useRuntimeConfig().public.contentVersion, content_type: 'page' }
   )
 } catch {
-  throw createError({
-    statusCode: 404,
-    message: 'Page not found.',
-    fatal: true
-  })
+  throw404()
 }
 </script>
 
 <template>
-  <div class="test home">
+  <div class="page home">
     <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
-    <h1>{{ story.name }}</h1>
+    <h1>{{ story?.name }}</h1>
     <section>
       <h1>section 1</h1>
     </section>

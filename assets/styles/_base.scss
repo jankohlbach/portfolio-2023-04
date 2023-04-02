@@ -46,6 +46,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+  display: block;
   color: inherit;
 }
 
@@ -60,6 +61,7 @@ body {
   font-weight: var(--fw-regular);
   font-size: var(--fs-base);
   background-color: var(--c-light);
+  color: var(--c-dark);
 }
 
 // scroll
@@ -76,17 +78,17 @@ body {
 }
 
 // grid
-.container {
-  max-width: var(--grid-max-width);
-  padding-inline: var(--grid-gutter);
-  margin-inline: auto;
-}
+// .container {
+//   max-width: var(--grid-max-width);
+//   padding-inline: var(--grid-gutter);
+//   margin-inline: auto;
+// }
 
-.grid {
-  display: grid;
-  gap: var(--grid-gutter);
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-}
+// .grid {
+//   display: grid;
+//   gap: var(--grid-gutter);
+//   grid-template-columns: repeat(var(--grid-columns), 1fr);
+// }
 
 // tweakpane
 .tp-dfwv {

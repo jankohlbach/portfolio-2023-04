@@ -1,6 +1,8 @@
 <template>
   <div class="layout">
-    menu
+    <Menu />
+    <Header />
+
     <slot />
   </div>
 </template>

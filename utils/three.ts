@@ -1,4 +1,6 @@
-export const resizeCanvas = (camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer) => {
+import { PerspectiveCamera, WebGLRenderer } from 'three'
+
+export const resizeCanvas = (camera: PerspectiveCamera, renderer: WebGLRenderer) => {
   camera.aspect = window.innerWidth / window.innerHeight
   camera.updateProjectionMatrix()
 
