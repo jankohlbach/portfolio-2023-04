@@ -62,4 +62,8 @@ const menu = useMenu()
 .button {
   font-size: var(--fz-base);
 }
+
+.button {
+  font-weight: 200;
+}
 </style>

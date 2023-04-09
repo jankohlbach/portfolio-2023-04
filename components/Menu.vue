@@ -134,6 +134,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  line-height: 1.1;
 }
 
 .links-meta {
