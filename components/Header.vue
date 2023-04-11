@@ -50,12 +50,15 @@ const menu = useMenu()
 
 .left {
   display: flex;
+  gap: rem(10) 0;
+  flex-wrap: wrap;
   flex-grow: 1;
 }
 
 .logo {
   flex-grow: 1;
-  max-width: min(rem(300), 50vw);
+  min-width: rem(100);
+  max-width: min(rem(300), 25vw);
 }
 
 .title,
