@@ -60,6 +60,7 @@ const menu = useMenu()
 .menu {
   position: fixed;
   inset: 0;
+  z-index: var(--zi-menu);
   display: none;
   background: var(--c-light);
 
@@ -71,6 +72,7 @@ const menu = useMenu()
 .logo {
   position: absolute;
   inset: 0;
+  z-index: -1;
   margin: auto;
   max-width: 80vmin;
   opacity: 0.2;
