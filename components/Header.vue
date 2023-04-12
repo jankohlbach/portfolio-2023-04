@@ -66,6 +66,11 @@ const menu = useMenu()
   font-size: var(--fz-base);
 }
 
+.title {
+   color: var(--c-light);
+   mix-blend-mode: difference;
+}
+
 .button {
   font-weight: 200;
 }
