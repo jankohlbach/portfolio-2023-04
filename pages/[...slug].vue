@@ -20,22 +20,6 @@ try {
 <template>
   <div class="page slug">
     <PageTitle>{{ story?.name }}</PageTitle>
-
-    <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
-    <section>
-      <h2>section 1</h2>
-    </section>
-    <section>
-      <h2>section 2</h2>
-    </section>
-    <section>
-      <h2>section 3</h2>
-    </section>
+    <StoryblokComponent v-for="block_module in story.content.blocks_modules" :key="block_module._uid" :blok="block_module" />
   </div>
 </template>
-
-<style lang="scss" scoped>
-section {
-  height: 100vh;
-}
-</style>
