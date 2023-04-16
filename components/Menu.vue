@@ -178,9 +178,11 @@ ul {
   justify-content: space-between;
   align-items: flex-end;
   line-height: 1.1;
+  pointer-events: none;
 
   .links-meta {
     display: flex;
+    pointer-events: all;
 
     li:last-child {
       a::after {
@@ -202,6 +204,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    pointer-events: all;
 
     a {
       display: inline-block;
