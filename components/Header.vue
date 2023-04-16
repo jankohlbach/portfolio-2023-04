@@ -56,8 +56,8 @@ const menu = useMenu()
 
 .logo {
   flex-grow: 1;
-  min-width: rem(100);
-  max-width: min(rem(300), 25vw);
+  min-width: rem(60);
+  max-width: min(rem(300), 18vw);
 }
 
 .title,

@@ -19,16 +19,17 @@ try {
 
 <template>
   <div class="page slug">
+    <PageTitle>{{ story?.name }}</PageTitle>
+
     <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
-    <h1>{{ story?.name }}</h1>
     <section>
-      <h1>section 1</h1>
+      <h2>section 1</h2>
     </section>
     <section>
-      <h1>section 2</h1>
+      <h2>section 2</h2>
     </section>
     <section>
-      <h1>section 3</h1>
+      <h2>section 3</h2>
     </section>
   </div>
 </template>
