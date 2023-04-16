@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { slug } = useRoute().params
 
-if (slug === 'home' || slug.includes('home')) {
+if (slug === '/' || slug === 'home' || slug.includes('home')) {
   throw404()
 }
 
