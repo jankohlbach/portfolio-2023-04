@@ -5,11 +5,6 @@
   // 20-25
   --s-s: clamp(1.25rem, 1.1629rem + 0.372vw, 1.563rem);
 
-  // layout (@link https://utopia.fyi/grid/calculator?c=375,20,1.2,1600,36,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,xs,xl,12)
-  // --grid-max-width: 102rem;
-  // --grid-gutter: var(--s-s-xs, clamp(1.25rem, calc(1.12rem + 0.55vw), 1.69rem));
-  // --grid-columns: 12;
-
   // fonts
   --ff-primary: 'UTF Alte Grotesk VF', 'Open Sans', 'Fira Sans', 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
