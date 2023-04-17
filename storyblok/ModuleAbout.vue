@@ -9,6 +9,7 @@ defineProps({
 
 <template>
   <section class="module-about">
+    <!-- TODO: use nuxtimage and mobile landscape -->
     <img :src="blok.asset_image.filename" :alt="blok.asset_image.alt">
     <div class="richtext" v-html="renderRichText(blok.richtext_text)" />
   </section>
