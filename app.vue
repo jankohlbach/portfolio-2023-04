@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Lenis from '@studio-freight/lenis'
 
+const scroll = useScroll()
 const menu = useMenu()
 
 onMounted(() => {
@@ -12,6 +13,10 @@ onMounted(() => {
   }
 
   requestAnimationFrame(raf)
+
+  lenis.on('scroll', (e: any) => {
+    scroll.value.percentage = window.scrollY / (e.dimensions.scrollHeight - e.dimensions.height) * 100
+  })
 
   watch(menu.value, () => {
     if (menu.value.isOpen) {

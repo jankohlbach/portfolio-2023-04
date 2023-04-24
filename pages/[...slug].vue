@@ -19,6 +19,7 @@ try {
 
 <template>
   <div class="page slug">
+    <ScrollPercentage />
     <PageTitle>{{ story?.name }}</PageTitle>
     <StoryblokComponent v-for="block_module in story.content.blocks_modules" :key="block_module._uid" :blok="block_module" />
   </div>
