@@ -4,19 +4,25 @@
   // spacings
   // 20-25
   --s-s: clamp(1.25rem, 1.1629rem + 0.372vw, 1.563rem);
+  // 60-180
+  --s-l: clamp(3.75rem, 1.659rem + 8.922vw, 11.25rem);
 
   // fonts
   --ff-primary: 'UTF Alte Grotesk VF', 'Open Sans', 'Fira Sans', 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
   // font-sizes
+  // 14-18
+  --fs-s: clamp(0.875rem, 0.805rem + 0.297vw, 1.125rem);
   // 16-22
   --fs-base: clamp(1rem, 0.895rem + 0.446vw, 1.375rem);
   // 24-80
   --fs-m: clamp(1.5rem, 0.524rem + 4.164vw, 5rem);
   // 60-140
   --fs-xl: clamp(3.75rem, 2.356rem + 5.948vw, 8.75rem);
+  // 40-200
+  --fs-xxl: clamp(2.5rem, -0.288rem + 11.896vw, 12.5rem);
   // 60-260
-  --fs-xxl: clamp(3.75rem, 0.265rem + 14.87vw, 16.25rem);
+  --fs-xxxl: clamp(3.75rem, 0.265rem + 14.87vw, 16.25rem);
 
   // font-weights
   --fw-thin: 100;
