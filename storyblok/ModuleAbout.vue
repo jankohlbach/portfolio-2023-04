@@ -28,7 +28,7 @@ section {
 }
 
 img {
-  max-width: rem(520);
+  max-width: min(rem(520), 100%);
   max-height: rem(800);
   object-fit: cover;
 
