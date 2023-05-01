@@ -45,6 +45,9 @@ export default defineNuxtConfig({
     '@/assets/styles/global.scss'
   ],
   vite: {
+    optimizeDeps: {
+      exclude: ['fsevents']
+    },
     plugins: [glsl()]
   }
 })
