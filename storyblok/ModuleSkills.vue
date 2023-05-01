@@ -37,17 +37,17 @@ h2 {
 
 .skill {
   margin-top: var(--s-l);
+
+  @include has-hover {
+    &:hover .tags {
+      opacity: 1;
+    }
+  }
 }
 
 h3 {
   font-size: var(--fs-xxl);
   font-weight: 100;
-
-  @include has-hover {
-    &:hover + .tags {
-      opacity: 1;
-    }
-  }
 }
 
 .tags {
