@@ -11,6 +11,7 @@ span {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 1;
   mix-blend-mode: difference;
   color: var(--c-light);
   pointer-events: none;
