@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { SbBlokData } from '@storyblok/js/dist/types'
+
 defineProps({
   blok: {
     type: Object,
@@ -11,11 +13,11 @@ defineProps({
   <section class="module-skills">
     <h2>{{ blok.text_pre }}</h2>
 
-    <div v-for="skill in blok.blocks_skills" :key="skill._uid" class="skill">
+    <div v-for="skill in (blok.blocks_skills as SbBlokData[])" :key="skill._uid" class="skill">
       <h3>{{ skill.text_title }}</h3>
 
       <div class="tags">
-        <span v-for="tag in skill.multioptions_tags" :key="tag._uid">{{ tag }}</span>
+        <span v-for="tag in (skill.multioptions_tags as SbBlokData[])" :key="tag._uid">{{ tag }}</span>
       </div>
     </div>
   </section>

@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import type { ISbStoryData, SbBlokData } from '@storyblok/js/dist/types'
+
 const { slug } = useRoute().params
 
 if (slug === '/' || slug === 'home' || slug.includes('home')) {
   throw404()
 }
 
-let story: any
+let story: ISbStoryData
 
 try {
   story = await useAsyncStoryblok(
@@ -21,6 +23,6 @@ try {
   <div class="page slug">
     <ScrollPercentage />
     <PageTitle>{{ story?.name }}</PageTitle>
-    <StoryblokComponent v-for="block_module in story.content.blocks_modules" :key="block_module._uid" :blok="block_module" />
+    <StoryblokComponent v-for="block_module in (story.content.blocks_modules as SbBlokData[])" :key="(block_module._uid)" :blok="block_module" />
   </div>
 </template>
