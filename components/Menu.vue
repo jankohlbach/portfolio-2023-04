@@ -48,7 +48,7 @@ const menu = useMenu()
         </ul>
       </nav>
       <div class="copyright">
-        <span>©2023</span>
+        <span>©{{ `${new Date().getFullYear()}` }}</span>
         <span>🧑‍💻 <nuxt-link to="/">Jan Kohlbach</nuxt-link></span>
         <span>🖌️ <nuxt-link to="https://undesigned.studio" target="_blank">undesigned.studio</nuxt-link></span>
       </div>
