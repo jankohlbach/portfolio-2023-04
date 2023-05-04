@@ -22,7 +22,7 @@ const menu = useMenu()
           <nuxt-link v-if="(<any>item.link).linktype === 'url'" :to="(<any>item.link).url">
             {{ (<any>item.link).title }}
           </nuxt-link>
-          <nuxt-link v-else :to="(<any>item.link).story.url">
+          <nuxt-link v-else :to="`/${(<any>item.link).story.url}`">
             {{ (<any>item.link).story.name }}
           </nuxt-link>
         </li>
