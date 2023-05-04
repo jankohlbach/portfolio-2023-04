@@ -55,8 +55,6 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-@use '~/assets/styles/functions' as *;
-
 section {
   position: relative;
   margin-inline: var(--s-s);

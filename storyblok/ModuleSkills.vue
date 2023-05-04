@@ -24,9 +24,6 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@use '~/assets/styles/functions' as *;
-@use '~/assets/styles/mixins' as *;
-
 section {
   margin-inline: var(--s-s);
   margin-top: rem(320);

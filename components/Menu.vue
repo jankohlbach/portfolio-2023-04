@@ -57,8 +57,6 @@ const menu = useMenu()
 </template>
 
 <style lang="scss" scoped>
-@use '~/assets/styles/functions' as *;
-
 .menu {
   position: fixed;
   inset: 0;

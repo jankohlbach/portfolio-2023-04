@@ -27,8 +27,6 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@use '~/assets/styles/functions' as *;
-
 section {
   position: relative;
   display: flex;

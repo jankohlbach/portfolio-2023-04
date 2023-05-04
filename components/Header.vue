@@ -27,8 +27,6 @@ const menu = useMenu()
 </template>
 
 <style lang="scss" scoped>
-@use '~/assets/styles/functions' as *;
-
 .header {
   position: relative;
   z-index: var(--zi-menu);

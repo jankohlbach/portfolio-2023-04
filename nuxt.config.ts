@@ -45,6 +45,13 @@ export default defineNuxtConfig({
     '@/assets/styles/global.scss'
   ],
   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/styles/functions" as *; @use "~/assets/styles/mixins" as *;'
+        }
+      }
+    },
     optimizeDeps: {
       exclude: ['fsevents']
     },
