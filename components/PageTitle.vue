@@ -9,6 +9,7 @@ h1 {
   font-size: var(--fs-xxxl);
   line-height: 0.88;
   text-transform: uppercase;
+  white-space: nowrap;
   margin: var(--s-s) var(--s-s) 0;
 
   @media (min-width: 768px) {

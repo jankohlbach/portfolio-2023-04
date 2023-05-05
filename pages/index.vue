@@ -1,11 +1,9 @@
 <script setup lang="ts">
-const { slug } = useRoute().params
-
 let story: any
 
 try {
   story = await useAsyncStoryblok(
-    slug && Array.isArray(slug) ? slug.join('/') : 'home',
+    'home',
     { version: <'draft'|'published'>useRuntimeConfig().public.contentVersion, content_type: 'page' }
   )
 } catch {
@@ -17,6 +15,9 @@ try {
   <div class="page home">
     <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
     <h1>{{ story?.name }}</h1>
+    <nuxt-link to="/projects/project-1">
+      project-1
+    </nuxt-link>
     <section>
       <h1>section 1</h1>
     </section>

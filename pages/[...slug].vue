@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { ISbStoryData, SbBlokData } from '@storyblok/js/dist/types'
 
-const { slug } = useRoute().params
+const { path } = useRoute()
 
-if (slug === '/' || slug === 'home' || slug.includes('home')) {
+if (path === '/home') {
   throw404()
 }
 
@@ -11,9 +11,14 @@ let story: ISbStoryData
 
 try {
   story = await useAsyncStoryblok(
-    slug && Array.isArray(slug) ? slug.join('/') : 'home',
+    path,
     { version: <'draft'|'published'>useRuntimeConfig().public.contentVersion, content_type: 'page' }
   )
+
+  // @ts-expect-error
+  if (!story.value) {
+    throw404()
+  }
 } catch {
   throw404()
 }
