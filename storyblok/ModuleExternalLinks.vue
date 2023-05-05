@@ -82,7 +82,6 @@ h2 {
 
 .links-external {
   width: 100%;
-  padding: var(--s-s);
   margin-block: rem(100) rem(200);
 
   &__list {
