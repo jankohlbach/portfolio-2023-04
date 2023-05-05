@@ -3,7 +3,7 @@ const scroll = useScroll()
 </script>
 
 <template>
-  <span class="scroll-percentage" :style="`--percentage: ${scroll.percentage}vw`">{{ Math.ceil(scroll.percentage) }}%</span>
+  <span class="scroll-percentage" :style="`--percentage: ${scroll.percentage}vw`">{{ Math.min(Math.ceil(scroll.percentage), 100) }}%</span>
 </template>
 
 <style lang="scss" scoped>
