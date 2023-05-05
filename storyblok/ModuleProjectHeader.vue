@@ -42,14 +42,15 @@ img {
 
 .meta {
   position: absolute;
-  left: rem(60);
+  left: rem(100);
   bottom: rem(5);
   display: flex;
   align-items: center;
-  gap: rem(24);
+  gap: rem(20);
 
   a {
     width: rem(20);
+    transform: translateY(-1px);
   }
 }
 </style>
