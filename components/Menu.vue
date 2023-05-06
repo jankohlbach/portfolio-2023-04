@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { SbBlokData } from '@storyblok/js/dist/types'
-
 const sb = useStoryblokApi()
 const { data: { story: { content } } } = await sb.get(
   'cdn/stories/globals',
@@ -18,21 +16,21 @@ const menu = useMenu()
     </svg>
     <nav class="links-internal">
       <ul class="links-internal__list">
-        <li v-for="item in (content.blocks_links_internal as SbBlokData[])" :key="item._uid">
-          <nuxt-link v-if="(<any>item.link).linktype === 'url'" :to="(<any>item.link).url">
-            {{ (<any>item.link).title }}
+        <li v-for="item in content.blocks_links_internal" :key="item._uid">
+          <nuxt-link v-if="item.link.linktype === 'url'" :to="item.link.url">
+            {{ item.link.title }}
           </nuxt-link>
-          <nuxt-link v-else :to="`/${(<any>item.link).story.url}`">
-            {{ (<any>item.link).story.name }}
+          <nuxt-link v-else :to="`/${item.link.story.url}`">
+            {{ item.link.story.name }}
           </nuxt-link>
         </li>
       </ul>
     </nav>
     <nav class="links-external">
       <ul class="links-external__list">
-        <li v-for="item in (content.blocks_links_external as SbBlokData[])" :key="item._uid">
-          <nuxt-link :to="(<any>item.link).url" target="_blank">
-            {{ (<any>item.link).title }}
+        <li v-for="item in content.blocks_links_external" :key="item._uid">
+          <nuxt-link :to="item.link.url" target="_blank">
+            {{ item.link.title }}
           </nuxt-link>
         </li>
       </ul>
@@ -40,9 +38,9 @@ const menu = useMenu()
     <div class="footer">
       <nav>
         <ul class="links-meta">
-          <li v-for="item in (content.blocks_links_meta as SbBlokData[])" :key="item._uid">
-            <nuxt-link :to="(<any>item.link).story.url">
-              {{ (<any>item.link).story.name }}
+          <li v-for="item in content.blocks_links_meta" :key="item._uid">
+            <nuxt-link :to="item.link.story.url">
+              {{ item.link.story.name }}
             </nuxt-link>
           </li>
         </ul>

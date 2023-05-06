@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ISbStoryData, SbBlokData } from '@storyblok/js/dist/types'
+import type { ISbStoryData } from '@storyblok/js/dist/types'
 
 const { path } = useRoute()
 
@@ -28,6 +28,6 @@ try {
   <div class="page slug">
     <ScrollPercentage />
     <PageTitle>{{ story?.name }}</PageTitle>
-    <StoryblokComponent v-for="block_module in (story.content.blocks_modules as SbBlokData[])" :key="(block_module._uid)" :blok="block_module" />
+    <StoryblokComponent v-for="block_module in story.content.blocks_modules" :key="(block_module._uid)" :blok="block_module" />
   </div>
 </template>

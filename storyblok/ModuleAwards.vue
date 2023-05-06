@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { SbBlokData } from '@storyblok/js/dist/types'
-
 defineProps({
   blok: {
     type: Object,
@@ -18,7 +16,7 @@ defineProps({
       <h2>{{ blok.text_pre }}</h2>
 
       <div class="awards">
-        <h3 v-for="award in (blok.blocks_awards as SbBlokData[])" :key="award._uid" class="award">
+        <h3 v-for="award in blok.blocks_awards" :key="award._uid" class="award">
           {{ award.text }}
         </h3>
       </div>

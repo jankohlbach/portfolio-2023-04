@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { SbBlokData } from '@storyblok/js/dist/types'
-
 defineProps({
   blok: {
     type: Object,
@@ -44,9 +42,9 @@ onBeforeUnmount(() => {
 
     <nav class="links-external">
       <ul class="links-external__list">
-        <li v-for="item in (blok.blocks_links_external as SbBlokData[])" ref="links" :key="item._uid" :data-abbr="(<any>item.link).abbr">
-          <nuxt-link :to="(<any>item.link).url" target="_blank">
-            {{ (<any>item.link).title }}
+        <li v-for="item in blok.blocks_links_external" ref="links" :key="item._uid" :data-abbr="item.link.abbr">
+          <nuxt-link :to="item.link.url" target="_blank">
+            {{ item.link.title }}
           </nuxt-link>
         </li>
       </ul>
