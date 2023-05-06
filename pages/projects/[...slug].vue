@@ -36,6 +36,6 @@ try {
 
 <style lang="scss" scoped>
 .modules {
-  padding-top: 90dvh;
+  padding-top: 90svh;
 }
 </style>
