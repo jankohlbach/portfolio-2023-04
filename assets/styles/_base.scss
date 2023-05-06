@@ -65,6 +65,11 @@ body {
   color: var(--c-dark);
 }
 
+b,
+strong {
+  font-weight: 200;
+}
+
 // scroll
 .lenis.lenis-smooth {
   scroll-behavior: auto;
