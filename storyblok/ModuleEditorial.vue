@@ -20,7 +20,6 @@ section {
 }
 
 img {
-  max-width: 100%;
   object-fit: cover;
 
   + img {
