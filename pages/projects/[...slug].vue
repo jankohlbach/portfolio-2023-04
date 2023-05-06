@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import type { ISbStoryData } from '@storyblok/js/dist/types'
-
 const { path } = useRoute()
 
 if (path === '/projects') {
   throw404()
 }
 
-let story: ISbStoryData
+let story: any
+let sortedBlocks: any
 
 try {
   story = await useAsyncStoryblok(
@@ -15,10 +14,16 @@ try {
     { version: <'draft'|'published'>useRuntimeConfig().public.contentVersion, content_type: 'page-project' }
   )
 
-  // @ts-expect-error
   if (!story.value) {
     throw404()
   }
+
+  sortedBlocks = [
+    ...Object.entries(story.value.content)
+      .filter(([key]) => key.startsWith('blocks_'))
+      .sort((a, b) => a[0] > b[0] ? 1 : -1)
+      .map(([, value]: any) => value[0])
+  ]
 } catch {
   throw404()
 }
@@ -29,7 +34,7 @@ try {
     <ScrollPercentage />
     <PageTitle>{{ story?.name }}</PageTitle>
     <div class="modules">
-      <StoryblokComponent v-for="block_module in ([...Object.entries(story.content).filter(([key]) => key.startsWith('blocks_'))].map(([, value]) => value[0]).reverse())" :key="(block_module._uid)" :blok="block_module" />
+      <StoryblokComponent v-for="block_module in sortedBlocks" :key="(block_module._uid)" :blok="block_module" />
     </div>
   </div>
 </template>

@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import type { ISbStoryData } from '@storyblok/js/dist/types'
-
 const { path } = useRoute()
 
 if (path === '/home') {
   throw404()
 }
 
-let story: ISbStoryData
+let story: any
 
 try {
   story = await useAsyncStoryblok(
@@ -15,7 +13,6 @@ try {
     { version: <'draft'|'published'>useRuntimeConfig().public.contentVersion, content_type: 'page' }
   )
 
-  // @ts-expect-error
   if (!story.value) {
     throw404()
   }
