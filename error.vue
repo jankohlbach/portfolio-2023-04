@@ -8,16 +8,10 @@ defineProps({
 </script>
 
 <template>
-  <div class="layout">
-    <Noise />
-    <Menu />
-    <Header />
-
-    <section>
-      <h1>{{ error.statusCode }}</h1>
-      <h2>{{ error.message }}</h2>
-    </section>
-  </div>
+  <section>
+    <h1>{{ error.statusCode }}</h1>
+    <h2>{{ error.message }}</h2>
+  </section>
 </template>
 
 <style lang="scss" scoped>
