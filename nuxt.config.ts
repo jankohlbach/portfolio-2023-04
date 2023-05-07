@@ -33,7 +33,8 @@ export default defineNuxtConfig({
         { name: 'og:type', content: 'website' },
         { name: 'og:locale', content: 'en' }
       ]
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   modules: [
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_ACCESS_TOKEN }]

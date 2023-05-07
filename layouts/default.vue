@@ -5,5 +5,7 @@
     <Header />
 
     <slot />
+
+    <PageTransition />
   </div>
 </template>
