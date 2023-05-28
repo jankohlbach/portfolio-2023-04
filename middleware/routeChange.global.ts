@@ -1,8 +1,10 @@
 export default defineNuxtRouteMiddleware(() => {
   clearError()
 
-  setTimeout(() => {
-    const menu = useMenu()
-    menu.value.isOpen = false
-  }, 500)
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      const menu = useMenu()
+      menu.value.isOpen = false
+    }, 500)
+  }
 })

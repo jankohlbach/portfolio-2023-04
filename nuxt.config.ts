@@ -2,7 +2,6 @@ import glsl from 'vite-plugin-glsl'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: process.env.NUXT_ENV_DEPLOY_ENV === 'production',
   runtimeConfig: {
     public: {
       contentVersion: process.env.NUXT_ENV_DEPLOY_ENV === 'production' ? 'published' : 'draft'
