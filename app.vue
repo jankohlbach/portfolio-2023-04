@@ -5,7 +5,7 @@ const scroll = useScroll()
 const menu = useMenu()
 
 onMounted(() => {
-  const lenis = new Lenis({ lerp: 0.075 })
+  const lenis = new Lenis()
 
   const raf = (time: number) => {
     lenis.raf(time)
