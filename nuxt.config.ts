@@ -16,9 +16,10 @@ export default defineNuxtConfig({
       title: 'Jan Kohlbach | Creative Developer & Visual Designer',
       link: [
         // { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }
+        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
         // { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
         // { rel: 'manifest', href: '/manifest.webmanifest' }
+        { rel: 'preload', href: '/fonts/utf-alte-grotest-vf/UTFAlteGroteskVF.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ],
       script: [
         { async: true, defer: true, 'data-website-id': '<ID>', src: 'https://tracking.jnkl.dev/umami.js' }
