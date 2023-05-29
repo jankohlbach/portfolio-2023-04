@@ -20,8 +20,10 @@ const menu = useMenu()
           <nuxt-link v-if="item.link.linktype === 'url'" :to="item.link.url">
             {{ item.link.title }}
           </nuxt-link>
-          <nuxt-link v-else :to="`/${item.link.story.url}`">
+          <!-- TODO: temp, add lab and activate -->
+          <nuxt-link v-else :to="`/${item.link.story.url}`" :class="{'disabled': item.link.story.url === 'lab'}">
             {{ item.link.story.name }}
+            <sub v-if="item.link.story.url === 'lab'">(coming)</sub>
           </nuxt-link>
         </li>
       </ul>
@@ -94,6 +96,19 @@ ul {
     font-size: var(--fs-xl);
     line-height: 1.3;
     text-transform: uppercase;
+
+    &.disabled {
+      position: relative;
+      opacity: 0.2;
+      pointer-events: none;
+
+      sub {
+        position: absolute;
+        top: 15%;
+        white-space: nowrap;
+        font-size: 0.2em;
+      }
+    }
   }
 
   @media (min-width: 960px) {
