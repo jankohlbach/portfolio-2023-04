@@ -4,10 +4,8 @@ import fsSource from '~/assets/shader/noiseFragment.glsl'
 
 const canvas = ref()
 
-const drawNoise = (gl: WebGL2RenderingContext, resolutionUniformLocation: WebGLUniformLocation | null) => {
+const drawNoise = (gl: WebGL2RenderingContext) => {
   resizeShaderCanvas(canvas.value, gl)
-
-  gl.uniform2f(resolutionUniformLocation, canvas.value.width * 1.0, canvas.value.height * 1.0)
 
   gl.clearColor(0, 0, 0, 0)
   gl.clear(gl.COLOR_BUFFER_BIT)
@@ -21,7 +19,6 @@ onMounted(() => {
   const shaderProgram = createShaderProgram(gl, vsSource, fsSource)
 
   const positionAttributeLocation = gl.getAttribLocation(shaderProgram, 'a_position')
-  const resolutionUniformLocation = gl.getUniformLocation(shaderProgram, 'u_resolution')
 
   const positionBuffer = gl.createBuffer()
 
@@ -42,9 +39,9 @@ onMounted(() => {
   gl.enableVertexAttribArray(positionAttributeLocation)
   gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0)
 
-  drawNoise(gl, resolutionUniformLocation)
+  drawNoise(gl)
 
-  window.addEventListener('resize', () => debounce(drawNoise(gl, resolutionUniformLocation)))
+  window.addEventListener('resize', () => debounce(drawNoise(gl)))
 })
 </script>
 
