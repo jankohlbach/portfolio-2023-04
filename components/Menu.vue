@@ -21,10 +21,13 @@ const menu = useMenu()
             {{ item.link.title }}
           </nuxt-link>
           <!-- TODO: temp, add lab and activate -->
-          <!-- <nuxt-link v-else :to="`/${item.link.story.url}`" :class="{'disabled': item.link.story.url === 'lab'}">
+          <!-- <nuxt-link v-else :to="`/${item.link.story.url}`">
             {{ item.link.story.name }}
-            <sub v-if="item.link.story.url === 'lab'">(coming)</sub>
           </nuxt-link> -->
+          <nuxt-link v-else :to="`/${item.link.story?.url || '#'}`" :class="{'disabled': !item.link.story}">
+            {{ item.link.story?.name || 'Lab' }}
+            <sub v-if="!item.link.story">(coming)</sub>
+          </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -97,6 +100,7 @@ ul {
     line-height: 1.3;
     text-transform: uppercase;
 
+    // TODO: temp, add lab and activate
     &.disabled {
       position: relative;
       opacity: 0.2;
