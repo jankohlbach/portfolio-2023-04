@@ -21,10 +21,10 @@ const menu = useMenu()
             {{ item.link.title }}
           </nuxt-link>
           <!-- TODO: temp, add lab and activate -->
-          <nuxt-link v-else :to="`/${item.link.story?.url}`" :class="{'disabled': item.link.story.url === 'lab'}">
+          <!-- <nuxt-link v-else :to="`/${item.link.story.url}`" :class="{'disabled': item.link.story.url === 'lab'}">
             {{ item.link.story.name }}
             <sub v-if="item.link.story.url === 'lab'">(coming)</sub>
-          </nuxt-link>
+          </nuxt-link> -->
         </li>
       </ul>
     </nav>
