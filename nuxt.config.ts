@@ -20,9 +20,9 @@ export default defineNuxtConfig({
         // { rel: 'manifest', href: '/manifest.webmanifest' }
         { rel: 'preload', href: '/fonts/utf-alte-grotest-vf/UTFAlteGroteskVF.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ],
-      script: [
-        { async: true, defer: true, 'data-website-id': '<ID>', src: 'https://tracking.jnkl.dev/umami.js' }
-      ],
+      // script: [
+      //   { async: true, defer: true, 'data-website-id': '<ID>', src: 'https://tracking.jnkl.dev/umami.js' }
+      // ],
       meta: [
         { name: 'robots', content: 'noindex,nofollow' },
         { name: 'theme-color', content: '#000000' },

@@ -10,12 +10,12 @@
   background-color: var(--c-dark);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.5s;
+  transition: all .5s;
 }
 
 .page-enter-from ~ .page-transition,
