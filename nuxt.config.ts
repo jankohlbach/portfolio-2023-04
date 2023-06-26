@@ -14,10 +14,9 @@ export default defineNuxtConfig({
       },
       title: 'Jan Kohlbach | Creative Developer & Visual Designer',
       link: [
-        // { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
-        // { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        // { rel: 'manifest', href: '/manifest.webmanifest' }
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/manifest.webmanifest' },
         { rel: 'preload', href: '/fonts/utf-alte-grotest-vf/UTFAlteGroteskVF.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ],
       // script: [
@@ -26,9 +25,9 @@ export default defineNuxtConfig({
       meta: [
         { name: 'robots', content: 'noindex,nofollow' },
         { name: 'theme-color', content: '#000000' },
-        { name: 'description', content: 'base' },
+        { name: 'description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
         { name: 'og:title', content: 'Jan Kohlbach | Creative Developer & Visual Designer' },
-        { name: 'og:description', content: 'base' },
+        { name: 'og:description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
         // { name: 'og:image', content: '/og-image.jpg' },
         { name: 'og:type', content: 'website' },
         { name: 'og:locale', content: 'en' }
