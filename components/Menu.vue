@@ -117,7 +117,7 @@ ul {
 
   @media (min-width: 960px) {
     position: absolute;
-    top: 0;
+    top: 2%;
     left: 0;
     height: 100%;
     padding: 0;
@@ -126,7 +126,7 @@ ul {
     &__list {
       justify-content: space-between;
       align-items: center;
-      height: 100%;
+      height: 96%;
     }
 
     li {
