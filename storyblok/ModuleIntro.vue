@@ -23,7 +23,7 @@ section {
 
 p {
   max-width: 80%;
-  font-size: var(--fs-m);
+  font-size: clamp(1.5rem, 0.977rem + 2.23vw, 3.375rem);
   line-height: 1.2;
 }
 </style>
