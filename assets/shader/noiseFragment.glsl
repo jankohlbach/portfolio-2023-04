@@ -2,7 +2,7 @@
 
 precision highp float;
 
-#include ./simplex2d;
+#include ./resources/noise;
 
 out vec4 out_color;
 
