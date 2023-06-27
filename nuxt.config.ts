@@ -26,11 +26,11 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'noindex,nofollow' },
         { name: 'theme-color', content: '#000000' },
         { name: 'description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
-        { name: 'og:title', content: 'Jan Kohlbach | Creative Developer & Visual Designer' },
-        { name: 'og:description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
-        // { name: 'og:image', content: '/og-image.jpg' },
-        { name: 'og:type', content: 'website' },
-        { name: 'og:locale', content: 'en' }
+        { property: 'og:title', content: 'Jan Kohlbach | Creative Developer & Visual Designer' },
+        { property: 'og:description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
+        // { property: 'og:image', content: '/og-image.jpg' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'en' }
       ]
     },
     pageTransition: { name: 'page', mode: 'out-in' }
