@@ -9,7 +9,7 @@ const menu = useMenu()
 </script>
 
 <template>
-  <aside class="menu" :class="{'open': menu.isOpen}">
+  <aside v-if="menu.isOpen" class="menu" :class="{'open': menu.isOpen}">
     <Noise />
     <ShaderBackground />
     <nav class="links-internal">

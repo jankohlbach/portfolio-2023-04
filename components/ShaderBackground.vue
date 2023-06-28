@@ -13,6 +13,7 @@ const cursor = {
 
 let geometry: THREE.PlaneGeometry
 let material: THREE.ShaderMaterial
+let raf: number
 
 onMounted(() => {
   const scene = new THREE.Scene()
@@ -52,10 +53,10 @@ onMounted(() => {
 
     renderer.render(scene, camera)
 
-    requestAnimationFrame(render)
+    raf = requestAnimationFrame(render)
   }
 
-  requestAnimationFrame(render)
+  raf = requestAnimationFrame(render)
 
   const resize = () => {
     resizeThreeCanvas(camera, renderer)
@@ -72,6 +73,10 @@ onMounted(() => {
   })
 
   window.addEventListener('resize', () => debounce(resize()))
+})
+
+onBeforeUnmount(() => {
+  cancelAnimationFrame(raf)
 })
 </script>
 
