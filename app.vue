@@ -15,6 +15,38 @@ onMounted(() => {
     background: #1A1A18;
     padding: 5px 10px;
   `)
+
+  const { cursorPos, setCursorPosCurrent, setCursorPosTarget } = useCursor()
+
+  let raf: number | null
+
+  window.addEventListener('mousemove', (event) => {
+    setCursorPosTarget(event.clientX, event.clientY)
+
+    if (!raf) {
+      raf = requestAnimationFrame(calcLerp)
+    }
+  })
+
+  const calcLerp = () => {
+    const x = lerp(cursorPos.value.current.x, cursorPos.value.target.x, 0.02)
+    const y = lerp(cursorPos.value.current.y, cursorPos.value.target.y, 0.02)
+
+    setCursorPosCurrent(x, y)
+
+    const delta = Math.sqrt(
+      ((cursorPos.value.target.x - cursorPos.value.current.x) ** 2) +
+      ((cursorPos.value.target.y - cursorPos.value.current.y) ** 2)
+    )
+
+    if (delta < 0.001 && raf) {
+      cancelAnimationFrame(raf)
+      raf = null
+      return
+    }
+
+    raf = requestAnimationFrame(calcLerp)
+  }
 })
 </script>
 
