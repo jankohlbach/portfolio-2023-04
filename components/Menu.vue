@@ -11,7 +11,7 @@ const menu = useMenu()
 <template>
   <aside v-if="menu.isOpen" class="menu" :class="{'open': menu.isOpen}">
     <Noise />
-    <ShaderBackground />
+    <MenuShader />
     <nav class="links-internal">
       <ul class="links-internal__list">
         <li v-for="item in content.blocks_links_internal" :key="item._uid">

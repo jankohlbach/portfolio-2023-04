@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import * as THREE from 'three'
 
-import vsSource from '~/assets/shader/distortionVertex.glsl'
-import fsSource from '~/assets/shader/distortionFragment.glsl'
+import vsSource from '~/assets/shader/menuVertex.glsl'
+import fsSource from '~/assets/shader/menuFragment.glsl'
 
 const canvas = ref()
 
-const cursor = {
-  current: { x: 0, y: 0 },
-  target: { x: 0, y: 0 }
-}
+const { cursorPos } = useCursor()
 
 let geometry: THREE.PlaneGeometry
 let material: THREE.ShaderMaterial
@@ -25,7 +22,7 @@ onMounted(() => {
     uniforms: {
       uTime: { value: 0 },
       uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-      uMouse: { value: new THREE.Vector2(cursor.current.x, cursor.current.y) },
+      uMouse: { value: new THREE.Vector2(cursorPos.value.current.x, cursorPos.value.current.y) },
       uImage: { value: new THREE.TextureLoader().load('/textures/menu-texture.svg') }
     },
     vertexShader: vsSource,
@@ -44,12 +41,9 @@ onMounted(() => {
   const render = (time = 0) => {
     time /= 1000
 
-    cursor.current.x = lerp(cursor.current.x, cursor.target.x, 0.02)
-    cursor.current.y = lerp(cursor.current.y, cursor.target.y, 0.02)
-
     material.uniforms.uTime.value = time
-    material.uniforms.uMouse.value.x = cursor.current.x
-    material.uniforms.uMouse.value.y = cursor.current.y
+    material.uniforms.uMouse.value.x = cursorPos.value.current.x
+    material.uniforms.uMouse.value.y = cursorPos.value.current.y
 
     renderer.render(scene, camera)
 
@@ -64,13 +58,6 @@ onMounted(() => {
     material.uniforms.uResolution.value.x = window.innerWidth
     material.uniforms.uResolution.value.y = window.innerHeight
   }
-
-  window.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX
-    const mouseY = event.clientY
-    cursor.target.x = (mouseX / window.innerWidth)
-    cursor.target.y = 1 - (mouseY / window.innerHeight)
-  })
 
   window.addEventListener('resize', () => debounce(resize()))
 })
