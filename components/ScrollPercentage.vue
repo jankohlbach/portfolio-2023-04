@@ -11,7 +11,7 @@ span {
   position: fixed;
   left: 0;
   bottom: rem(5);
-  z-index: 1;
+  z-index: var(--zi-scroll-percentage);
   mix-blend-mode: difference;
   color: var(--c-light);
   pointer-events: none;

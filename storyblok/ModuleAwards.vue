@@ -9,9 +9,7 @@ defineProps({
 
 <template>
   <section class="module-awards">
-    <div class="temp-watermark">
-      www
-    </div>
+    <AwardsShader />
     <div class="wrap">
       <h2>{{ blok.text_pre }}</h2>
 
@@ -35,17 +33,9 @@ section {
   color: var(--c-light);
 }
 
-.temp-watermark {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  text-align: center;
-  line-height: 100vh;
-  font-size: 30vmin;
-  opacity: 0.2;
-}
-
 .wrap {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
