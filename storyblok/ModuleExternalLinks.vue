@@ -6,15 +6,15 @@ defineProps({
   }
 })
 
-const watermark = ref('')
+const texturePath = ref('')
 const links = ref([])
 
 const changeWatermark = (e: MouseEvent) => {
-  watermark.value = (e.target as HTMLElement | null)?.dataset.abbr || ''
+  texturePath.value = `/textures/links-texture-${(e.target as HTMLElement | null)?.dataset.abbr?.toLowerCase()}.svg`
 }
 
 const removeWatermark = () => {
-  watermark.value = ''
+  texturePath.value = ''
 }
 
 onMounted(() => {
@@ -34,48 +34,56 @@ onBeforeUnmount(() => {
 
 <template>
   <section class="module-external-links">
-    <div class="temp-watermark">
-      {{ watermark }}
+    <div class="shader">
+      <LinksShader :texture="texturePath" />
     </div>
 
-    <h2>{{ blok.text_pre }}</h2>
+    <div class="content">
+      <h2>{{ blok.text_pre }}</h2>
 
-    <nav class="links-external">
-      <ul class="links-external__list">
-        <li v-for="item in blok.blocks_links_external" ref="links" :key="item._uid" :data-abbr="item.link.abbr">
-          <nuxt-link :to="item.link.url" target="_blank">
-            {{ item.link.title }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </nav>
+      <nav class="links-external">
+        <ul class="links-external__list">
+          <li v-for="item in blok.blocks_links_external" ref="links" :key="item._uid" :data-abbr="item.link.abbr">
+            <nuxt-link :to="item.link.url" target="_blank">
+              {{ item.link.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 section {
   position: relative;
-  margin-inline: var(--s-s);
   margin-top: rem(320);
+}
+
+.shader {
+  display: none;
 
   @media (min-width: 960px) {
-    min-height: calc(100vh - rem(80));
+    display: block;
   }
 }
 
-.temp-watermark {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  text-align: center;
-  line-height: 3;
-  font-size: 30vmin;
-  opacity: 0.2;
+.content {
+  position: relative;
+  margin-inline: var(--s-s);
+
+  @media (min-width: 960px) {
+    min-height: 100vh;
+  }
 }
 
 h2 {
   font-size: var(--fs-base);
   font-weight: 200;
+
+  @media (min-width: 960px) {
+    padding-top: rem(80);
+  }
 }
 
 .links-external {
@@ -85,22 +93,36 @@ h2 {
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(16) rem(50);
+    gap: rem(16) 0;
     justify-content: space-between;
     list-style-type: none;
   }
 
   li {
     width: calc(50% - rem(25));
+
+    @media (min-width: 960px) {
+      &:first-child a {
+        padding-left: 0;
+      }
+
+      &:last-child a {
+        padding-right: 0;
+      }
+    }
   }
 
   a {
     text-transform: uppercase;
+
+    @media (min-width: 960px) {
+      padding: rem(50) rem(40);
+    }
   }
 
   @media (min-width: 960px) {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 0;
     transform: translateY(-50%);
     padding: 0;
