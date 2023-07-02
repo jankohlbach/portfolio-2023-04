@@ -8,34 +8,10 @@ h6 {
   line-height: 1.2;
 }
 
-// h1 {
-//   font-size: var(--fs-6);
-// }
-
-// h2 {
-//   font-size: var(--fs-4);
-// }
-
-// h3 {
-//   font-size: var(--fs-2);
-// }
-
-// h4 {
-//   font-size: var(--fs-1);
-// }
-
-// h5 {
-//   font-size: var(--fs-1);
-// }
-
-// h6 {
-//   font-size: var(--fs-1);
-// }
-
 .richtext {
-  * {
+  > * {
     &:not(:last-child) {
-      margin-bottom: 1em;
+      margin-bottom: 0.75em;
     }
   }
 
@@ -45,9 +21,32 @@ h6 {
   h4,
   h5,
   h6 {
+    font-weight: 200;
+
     &:not(:first-child) {
-      margin-top: 1.2em;
+      margin-top: 1.75em;
     }
+  }
+
+  h2 {
+    font-size: clamp(3.05rem, calc(2.73rem + 1.36vw), 4.20rem);
+  }
+
+  h3 {
+    font-size: clamp(2.44rem, calc(2.19rem + 1.09vw), 3.36rem);
+  }
+
+  h4 {
+    font-size: clamp(1.95rem, calc(1.75rem + 0.87vw), 2.69rem);
+  }
+
+  h5 {
+    font-size: clamp(1.56rem, calc(1.40rem + 0.70vw), 2.15rem);
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: underline;
   }
 
   ul,

@@ -2,7 +2,7 @@
   <section class="module-contact">
     <div class="wrap">
       <h2>Want to work on something together, have a request or just wanna say hi?</h2>
-      <a href="mailto:hi@jankohlbach.com">hi@jankohlbach.com</a>
+      <a href="mailto:hi@jankohlbach.com">→ hi@jankohlbach.com</a>
     </div>
   </section>
 </template>
@@ -14,7 +14,7 @@ section {
 }
 
 .wrap {
-  max-width: min(rem(900), 90%);
+  max-width: min(rem(960), 90%);
 
   @media (min-width: 768px) {
     margin: auto;

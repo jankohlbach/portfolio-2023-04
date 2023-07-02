@@ -40,6 +40,10 @@ try {
 </template>
 
 <style lang="scss" scoped>
+.project {
+  overflow-x: hidden;
+}
+
 .modules {
   padding-top: 90svh;
 }

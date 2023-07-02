@@ -32,6 +32,7 @@ const menu = useMenu()
   z-index: var(--zi-menu);
   padding: var(--s-s);
   display: flex;
+  gap: rem(16);
   justify-content: space-between;
   align-items: flex-start;
   mix-blend-mode: difference;
