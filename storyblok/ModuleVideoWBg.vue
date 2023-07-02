@@ -22,6 +22,7 @@ section {
 
 img,
 video {
+  width: 100%;
   grid-area: 1 / 1;
 }
 

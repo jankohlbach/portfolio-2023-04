@@ -18,4 +18,8 @@ section {
   margin-inline: var(--s-s);
   margin-top: rem(320);
 }
+
+img {
+  width: 100%;
+}
 </style>

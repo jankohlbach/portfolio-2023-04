@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <section class="module-project-intro">
-    <div class="text" v-html="renderRichText(blok.richtext_text)" />
+    <div class="text richtext richtext-simple" v-html="renderRichText(blok.richtext_text)" />
     <div class="intro">
       <h2>{{ blok.textarea_intro }}</h2>
       <div class="tags">
@@ -42,6 +42,7 @@ section {
 .intro {
   flex-shrink: 1;
   margin-top: rem(60);
+  max-width: rem(960);
 
   @media (min-width: 960px) {
     margin-top: rem(160);

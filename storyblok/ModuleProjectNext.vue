@@ -47,4 +47,8 @@ h2 {
   font-weight: 100;
   flex-basis: 60%;
 }
+
+img {
+  width: 100%;
+}
 </style>

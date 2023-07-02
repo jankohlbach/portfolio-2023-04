@@ -67,7 +67,7 @@ onBeforeUnmount(() => {
   <div class="container-index">
     <div ref="linksContainer" class="links-container">
       <nuxt-link v-for="project, i in projects" :key="project._uid" :to="project.link_project.story.url" :class="{'active': home.currentIndex === Number(i)}">
-        {{ project.link_project.story.name }}
+        {{ project.text_title_index }}
       </nuxt-link>
     </div>
   </div>
