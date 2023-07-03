@@ -36,7 +36,7 @@ section {
 
 .text {
   flex-shrink: 2;
-  max-width: min(rem(520), 90%);
+  max-width: min(rem(450), 90%);
 }
 
 .intro {
