@@ -7,5 +7,6 @@
     <slot />
 
     <PageTransition />
+    <Intro />
   </div>
 </template>
