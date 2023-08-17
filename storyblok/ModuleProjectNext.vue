@@ -28,7 +28,7 @@ const story = await useAsyncStoryblok(
 
 <style lang="scss" scoped>
 section {
-  margin-top: rem(320);
+  margin-top: to-rem(320);
 }
 
 .wrap {

@@ -32,7 +32,7 @@ const menu = useMenu()
   z-index: var(--zi-menu);
   padding: var(--s-s);
   display: flex;
-  gap: rem(16);
+  gap: to-rem(16);
   justify-content: space-between;
   align-items: flex-start;
   mix-blend-mode: difference;
@@ -48,15 +48,15 @@ const menu = useMenu()
 
 .left {
   display: flex;
-  gap: rem(10) 0;
+  gap: to-rem(10) 0;
   flex-wrap: wrap;
   flex-grow: 1;
 }
 
 .logo {
   flex-grow: 1;
-  min-width: rem(60);
-  max-width: min(rem(300), 18vw);
+  min-width: to-rem(60);
+  max-width: min(to-rem(300), 18vw);
 }
 
 .title,

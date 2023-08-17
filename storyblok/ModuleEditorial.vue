@@ -16,14 +16,14 @@ defineProps({
 <style lang="scss" scoped>
 section {
   margin-inline: var(--s-s);
-  margin-top: rem(320);
+  margin-top: to-rem(320);
 }
 
 img {
   object-fit: cover;
 
   + img {
-    margin-top: rem(100);
+    margin-top: to-rem(100);
   }
 
   &:nth-child(odd) {
@@ -33,7 +33,7 @@ img {
 
   &:nth-child(even) {
     margin-left: auto;
-    margin-right: rem(100);
+    margin-right: to-rem(100);
     width: 690px;
     aspect-ratio: 690 / 920;
   }

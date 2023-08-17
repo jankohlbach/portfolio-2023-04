@@ -10,11 +10,11 @@
 <style lang="scss" scoped>
 section {
   margin-inline: var(--s-s);
-  margin-top: rem(180);
+  margin-top: to-rem(180);
 }
 
 .wrap {
-  max-width: min(rem(960), 90%);
+  max-width: min(to-rem(960), 90%);
 
   @media (min-width: 768px) {
     margin: auto;
@@ -28,7 +28,7 @@ h2 {
 
 a {
   display: inline-block;
-  margin-top: rem(20);
+  margin-top: to-rem(20);
   font-size: var(--fs-m);
 }
 </style>

@@ -75,7 +75,7 @@ const changeIndex = (index: number) => {
 .view-button {
   position: fixed;
   right: var(--s-s);
-  bottom: rem(5);
+  bottom: to-rem(5);
   z-index: 1;
 }
 </style>

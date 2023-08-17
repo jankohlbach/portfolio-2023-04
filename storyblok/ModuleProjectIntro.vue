@@ -26,7 +26,7 @@ section {
   flex-direction: column-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: rem(60) rem(100);
+  gap: to-rem(60) to-rem(100);
 
   @media (min-width: 960px) {
     flex-direction: row;
@@ -36,26 +36,26 @@ section {
 
 .text {
   flex-shrink: 2;
-  max-width: min(rem(450), 90%);
+  max-width: min(to-rem(450), 90%);
 }
 
 .intro {
   flex-shrink: 1;
-  margin-top: rem(60);
-  max-width: rem(960);
+  margin-top: to-rem(60);
+  max-width: to-rem(960);
 
   @media (min-width: 960px) {
-    margin-top: rem(160);
+    margin-top: to-rem(160);
   }
 }
 
 h2 {
-  max-width: min(rem(520), 90%);
+  max-width: min(to-rem(520), 90%);
   font-size: var(--fs-m);
   font-weight: 100;
 
   @media (min-width: 960px) {
-    max-width: rem(900);
+    max-width: to-rem(900);
   }
 }
 
@@ -63,7 +63,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 1em 1.2em;
-  margin-top: rem(40);
+  margin-top: to-rem(40);
 
   span {
     padding: 1em 2em;

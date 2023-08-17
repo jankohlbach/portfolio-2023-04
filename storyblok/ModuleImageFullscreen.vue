@@ -16,7 +16,7 @@ defineProps({
 <style lang="scss" scoped>
 section {
   margin-inline: var(--s-s);
-  margin-top: rem(320);
+  margin-top: to-rem(320);
 }
 
 img {

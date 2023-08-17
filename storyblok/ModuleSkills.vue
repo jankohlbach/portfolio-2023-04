@@ -24,7 +24,7 @@ defineProps({
 <style lang="scss" scoped>
 section {
   margin-inline: var(--s-s);
-  margin-top: rem(320);
+  margin-top: to-rem(320);
 }
 
 h2 {
@@ -51,7 +51,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 1em 1.2em;
-  margin-top: rem(20);
+  margin-top: to-rem(20);
 
   @include has-hover {
     opacity: 0;

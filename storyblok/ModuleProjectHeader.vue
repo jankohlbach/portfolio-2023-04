@@ -42,14 +42,14 @@ img {
 
 .meta {
   position: absolute;
-  left: rem(100);
-  bottom: rem(5);
+  left: to-rem(100);
+  bottom: to-rem(5);
   display: flex;
   align-items: center;
-  gap: rem(20);
+  gap: to-rem(20);
 
   a {
-    width: rem(20);
+    width: to-rem(20);
     transform: translateY(-1px);
   }
 }

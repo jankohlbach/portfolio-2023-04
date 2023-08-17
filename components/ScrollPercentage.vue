@@ -10,7 +10,7 @@ const scroll = useScroll()
 span {
   position: fixed;
   left: 0;
-  bottom: rem(5);
+  bottom: to-rem(5);
   z-index: var(--zi-scroll-percentage);
   mix-blend-mode: difference;
   color: var(--c-light);

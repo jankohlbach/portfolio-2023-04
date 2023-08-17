@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
 <style lang="scss" scoped>
 section {
   position: relative;
-  margin-top: rem(320);
+  margin-top: to-rem(320);
 }
 
 .shader {
@@ -82,24 +82,24 @@ h2 {
   font-weight: 200;
 
   @media (min-width: 960px) {
-    padding-top: rem(80);
+    padding-top: to-rem(80);
   }
 }
 
 .links-external {
   width: 100%;
-  margin-block: rem(100) rem(200);
+  margin-block: to-rem(100) to-rem(200);
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(16) 0;
+    gap: to-rem(16) 0;
     justify-content: space-between;
     list-style-type: none;
   }
 
   li {
-    width: calc(50% - rem(25));
+    width: calc(50% - to-rem(25));
 
     @media (min-width: 960px) {
       &:first-child a {
@@ -116,7 +116,7 @@ h2 {
     text-transform: uppercase;
 
     @media (min-width: 960px) {
-      padding: rem(50) rem(40);
+      padding: to-rem(50) to-rem(40);
     }
   }
 

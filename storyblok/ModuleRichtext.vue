@@ -16,11 +16,11 @@ defineProps({
 <style lang="scss" scoped>
 section {
   margin-inline: var(--s-s);
-  margin-block: rem(180) rem(320);
+  margin-block: to-rem(180) to-rem(320);
 }
 
 div {
-  max-width: min(rem(960), 90%);
+  max-width: min(to-rem(960), 90%);
 
   @media (min-width: 768px) {
     margin: auto;

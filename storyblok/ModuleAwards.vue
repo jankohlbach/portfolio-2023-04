@@ -28,7 +28,7 @@ section {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  margin-top: rem(320);
+  margin-top: to-rem(320);
   background-color: var(--c-dark);
   color: var(--c-light);
 }
@@ -40,7 +40,7 @@ section {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
-  padding-block: rem(100);
+  padding-block: to-rem(100);
   margin-inline: var(--s-s);
 }
 

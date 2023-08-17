@@ -77,7 +77,7 @@ ul {
 .links-internal {
   width: 100%;
   padding: var(--s-s);
-  margin-top: max(rem(140), 20vmin);
+  margin-top: max(to-rem(140), 20vmin);
 
   &__list {
     display: flex;
@@ -145,12 +145,12 @@ ul {
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(16) rem(50);
+    gap: to-rem(16) to-rem(50);
     justify-content: space-around;
   }
 
   li {
-    width: calc(50% - rem(25));
+    width: calc(50% - to-rem(25));
   }
 
   a {
@@ -201,7 +201,7 @@ ul {
 
       &::after {
         content: '·';
-        padding-inline: rem(5);
+        padding-inline: to-rem(5);
       }
     }
   }

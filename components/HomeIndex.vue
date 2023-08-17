@@ -111,14 +111,14 @@ a {
     inset: 0;
     margin: auto;
     aspect-ratio: 450 / 250;
-    max-width: min(90%, rem(450));
+    max-width: min(90%, to-rem(450));
   }
 
   &-previous,
   &-next {
     display: none;
     aspect-ratio: 135 / 90;
-    max-width: rem(135);
+    max-width: to-rem(135);
     filter: blur(2px);
 
     @media (min-width: 768px) {
@@ -140,7 +140,7 @@ a {
 .current-project {
   position: fixed;
   left: var(--s-s);
-  bottom: rem(5);
+  bottom: to-rem(5);
   z-index: 1;
   color: var(--c-light);
   mix-blend-mode: difference;
