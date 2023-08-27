@@ -2,6 +2,7 @@ precision mediump float;
 
 uniform float uTime;
 uniform vec2 uResolution; // in pixel
+uniform int uDpr;
 uniform vec2 uMouse; // 0 (left) 0 (bottom) - 1 (top) 1 (right)
 uniform sampler2D uImage;
 
@@ -27,9 +28,10 @@ void main() {
   float circle = 1.0 - distance(vec2(uMouse.x, uMouse.y * ratio), vec2(vUv.x, vUv.y * ratio)) * 10.0;
 
   float noise = snoise(gl_FragCoord.xy);
+  float noiseMultiplier = noise * (5000.0 / float(uDpr) / uResolution.x);
 
-  texCoord.x += (sin(texCoord.y * 2.0 + circle + uTime) / 100.0) * noise * (3250.0 / uResolution.x);
-  texCoord.y += (sin(texCoord.x * 2.0 + circle + uTime) / 100.0) * noise * (3250.0 / uResolution.x);
+  texCoord.x += (sin(texCoord.y * 2.0 + circle + uTime) / 100.0) * noiseMultiplier;
+  texCoord.y += (sin(texCoord.x * 2.0 + circle + uTime) / 100.0) * noiseMultiplier;
 
   vec3 tex = vec3(texture(uImage, texCoord));
 

@@ -22,6 +22,7 @@ onMounted(() => {
     uniforms: {
       uTime: { value: 0 },
       uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+      uDpr: { value: window.devicePixelRatio },
       uMouse: { value: new THREE.Vector2(cursorPos.value.current.x, cursorPos.value.current.y) },
       uImage: { value: new THREE.TextureLoader().load('/textures/menu-texture.svg') }
     },
@@ -57,6 +58,7 @@ onMounted(() => {
 
     material.uniforms.uResolution.value.x = window.innerWidth
     material.uniforms.uResolution.value.y = window.innerHeight
+    material.uniforms.uDpr.value = window.devicePixelRatio
   }
 
   window.addEventListener('resize', () => debounce(resize()))
