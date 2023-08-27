@@ -88,14 +88,17 @@ onBeforeUnmount(() => {
 
 .links-container {
   display: flex;
+  gap: var(--s-s);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  text-align: center;
   transition: transform .7s;
 }
 
 a {
   font-size: var(--fs-xl);
+  line-height: 1.1em;
 
   &.active {
     text-decoration: underline;
