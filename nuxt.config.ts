@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      title: 'Jan Kohlbach | Creative Developer & Visual Designer',
+      title: 'Jan Kohlbach | Creative Developer & Digital Designer',
       link: [
         { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'noindex,nofollow' },
         { name: 'theme-color', content: '#000000' },
         { name: 'description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
-        { property: 'og:title', content: 'Jan Kohlbach | Creative Developer & Visual Designer' },
+        { property: 'og:title', content: 'Jan Kohlbach | Creative Developer & Digital Designer' },
         { property: 'og:description', content: 'Creative Developer & Digital Designer | Crafting Immersive Experiences with Purpose and Playfulness | Let\'s collaborate and create award-winning projects together.' },
         // { property: 'og:image', content: '/og-image.jpg' },
         { property: 'og:type', content: 'website' },
