@@ -5,7 +5,7 @@ import fsSource from '~/assets/shader/noiseFragment.glsl'
 const canvas = ref()
 
 const drawNoise = (gl: WebGL2RenderingContext) => {
-  resizeShaderCanvas(canvas.value, gl)
+  resizeShaderCanvas(canvas.value, gl, 2)
 
   gl.clearColor(0, 0, 0, 0)
   gl.clear(gl.COLOR_BUFFER_BIT)

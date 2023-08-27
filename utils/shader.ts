@@ -1,6 +1,6 @@
-export const resizeShaderCanvas = (canvas: HTMLCanvasElement, gl: WebGL2RenderingContext) => {
-  canvas.width = window.innerWidth * Math.min(window.devicePixelRatio, 2)
-  canvas.height = window.innerHeight * Math.min(window.devicePixelRatio, 2)
+export const resizeShaderCanvas = (canvas: HTMLCanvasElement, gl: WebGL2RenderingContext, fixedRatio: number | null = null) => {
+  canvas.width = window.innerWidth * (fixedRatio || Math.min(window.devicePixelRatio, 2))
+  canvas.height = window.innerHeight * (fixedRatio || Math.min(window.devicePixelRatio, 2))
   canvas.style.width = `${window.innerWidth}px`
   canvas.style.height = `${window.innerHeight}px`
 
