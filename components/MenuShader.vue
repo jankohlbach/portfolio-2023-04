@@ -15,9 +15,9 @@ let raf: number
 onMounted(() => {
   const scene = new THREE.Scene()
 
-  const camera = new THREE.OrthographicCamera(-5, 5, 5, -5, -10, 10)
+  const camera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, -1, 1)
 
-  geometry = new THREE.PlaneGeometry(10, 10, 10, 10)
+  geometry = new THREE.PlaneGeometry(1, 1, 1, 1)
   material = new THREE.ShaderMaterial({
     uniforms: {
       uTime: { value: 0 },
@@ -36,7 +36,7 @@ onMounted(() => {
 
   const renderer = new THREE.WebGLRenderer({ canvas: canvas.value, alpha: true, antialias: true })
   renderer.setSize(window.innerWidth, window.innerHeight)
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  renderer.setPixelRatio(2)
 
   const render = (time = 0) => {
     time /= 1000
@@ -53,7 +53,7 @@ onMounted(() => {
   raf = requestAnimationFrame(render)
 
   const resize = () => {
-    resizeThreeCanvas(camera, renderer)
+    resizeThreeCanvas(camera, renderer, 2)
 
     material.uniforms.uResolution.value.x = window.innerWidth
     material.uniforms.uResolution.value.y = window.innerHeight

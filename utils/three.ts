@@ -1,6 +1,6 @@
 import { PerspectiveCamera, OrthographicCamera, WebGLRenderer } from 'three'
 
-export const resizeThreeCanvas = (camera: PerspectiveCamera | OrthographicCamera, renderer: WebGLRenderer) => {
+export const resizeThreeCanvas = (camera: PerspectiveCamera | OrthographicCamera, renderer: WebGLRenderer, fixedRatio: number | null = null) => {
   if (camera instanceof PerspectiveCamera) {
     camera.aspect = window.innerWidth / window.innerHeight
   }
@@ -8,5 +8,5 @@ export const resizeThreeCanvas = (camera: PerspectiveCamera | OrthographicCamera
   camera.updateProjectionMatrix()
 
   renderer.setSize(window.innerWidth, window.innerHeight)
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  renderer.setPixelRatio(fixedRatio || Math.min(window.devicePixelRatio, 2))
 }

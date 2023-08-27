@@ -15,7 +15,7 @@ const { cursorPos } = useCursor()
 
 let geometry: THREE.PlaneGeometry
 let material: THREE.ShaderMaterial
-let animationFrame: number
+let raf: number
 
 onMounted(() => {
   // shader
@@ -55,10 +55,10 @@ onMounted(() => {
 
     renderer.render(scene, camera)
 
-    animationFrame = requestAnimationFrame(render)
+    raf = requestAnimationFrame(render)
   }
 
-  animationFrame = requestAnimationFrame(render)
+  raf = requestAnimationFrame(render)
 
   window.addEventListener('resize', debounce(() => {
     resizeThreeCanvas(camera, renderer)
@@ -123,7 +123,7 @@ onMounted(() => {
         duration: 0.8
       }
     )
-    .call(() => cancelAnimationFrame(animationFrame))
+    .call(() => cancelAnimationFrame(raf))
 })
 </script>
 

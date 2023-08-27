@@ -5,7 +5,7 @@ uniform vec2 uResolution; // in pixel
 uniform vec2 uMouse; // 0 (left) 0 (bottom) - 1 (top) 1 (right)
 uniform sampler2D uImage;
 
-varying vec2 vUv;
+in vec2 vUv;
 
 #include './resources/utils';
 #include './resources/noise';
@@ -14,6 +14,9 @@ out vec4 outColor;
 
 
 void main() {
+  //
+  // distorted texture
+  //
   vec2 texCoord = vUv;
 
   // object-fit cover
@@ -25,8 +28,8 @@ void main() {
 
   float noise = snoise(gl_FragCoord.xy);
 
-  texCoord.x += (sin(texCoord.y * 2.0 + circle + uTime) / 100.0) * noise * 2.0;
-  texCoord.y += (sin(texCoord.x * 2.0 + circle + uTime) / 100.0) * noise * 2.0;
+  texCoord.x += (sin(texCoord.y * 2.0 + circle + uTime) / 100.0) * noise * (3250.0 / uResolution.x);
+  texCoord.y += (sin(texCoord.x * 2.0 + circle + uTime) / 100.0) * noise * (3250.0 / uResolution.x);
 
   vec3 tex = vec3(texture(uImage, texCoord));
 
