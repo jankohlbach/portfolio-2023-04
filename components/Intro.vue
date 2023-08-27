@@ -44,7 +44,7 @@ onMounted(() => {
 
   const renderer = new THREE.WebGLRenderer({ canvas: canvas.value, alpha: true, antialias: true })
   renderer.setSize(window.innerWidth, window.innerHeight)
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  renderer.setPixelRatio(2)
 
   const render = (time = 0) => {
     time /= 1000
